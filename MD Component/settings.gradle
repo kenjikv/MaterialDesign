@@ -1,0 +1,2 @@
+rootProject.name = "MD Component"
+include ':app'
