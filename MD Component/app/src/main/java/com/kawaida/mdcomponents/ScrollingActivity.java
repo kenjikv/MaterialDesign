@@ -1,10 +1,12 @@
-package com.kawaida.mdcomponent;
+package com.kawaida.mdcomponents;
 
 import android.os.Bundle;
 
 import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
+import com.kawaida.mdcomponents.utils.CommonUtils;
+import com.kawaida.mdcomponents.utils.Constants;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
@@ -13,10 +15,6 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.view.MenuItem;
 import android.view.View;
-
-import com.kawaida.mdcomponent.databinding.ActivityScrollingBinding;
-import com.kawaida.mdcomponent.utils.CommonUtils;
-import com.kawaida.mdcomponent.utils.Constants;
 
 public class ScrollingActivity extends AppCompatActivity {
 
@@ -39,6 +37,7 @@ public class ScrollingActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
 
         String nameFragment = null;
         if(savedInstanceState == null){

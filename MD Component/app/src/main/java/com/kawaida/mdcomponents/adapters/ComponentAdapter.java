@@ -1,16 +1,13 @@
-package com.kawaida.mdcomponent.adapters;
+package com.kawaida.mdcomponents.adapters;
 
-import android.content.pm.ShortcutManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.kawaida.mdcomponent.R;
-import com.kawaida.mdcomponent.utils.Component;
-import com.kawaida.mdcomponent.utils.OnClickListener;
-
-import org.w3c.dom.Text;
+import com.kawaida.mdcomponents.R;
+import com.kawaida.mdcomponents.utils.Component;
+import com.kawaida.mdcomponents.utils.OnClickListener;
 
 import java.util.List;
 
@@ -40,8 +37,14 @@ public class ComponentAdapter extends RecyclerView.Adapter<ComponentAdapter.View
         Component component = mComponents.get(position);
 
         holder.setClickListener(mListener, component);
+
         holder.tvName.setText(component.getName());
         holder.imgPhoto.setImageResource(component.getPhotoRes());
+    }
+
+    @Override
+    public int getItemCount() {
+        return mComponents.size();
     }
 
     public void add(Component component){
@@ -51,21 +54,17 @@ public class ComponentAdapter extends RecyclerView.Adapter<ComponentAdapter.View
         }
     }
 
-    @Override
-    public int getItemCount() {
-        return mComponents.size();
-    }
-
     class ViewHolder extends RecyclerView.ViewHolder{
+
         AppCompatImageView imgPhoto;
         TextView tvName;
         View view;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            this.imgPhoto = itemView.findViewById(R.id.imgPhoto);
-            this.tvName = itemView.findViewById(R.id.tvName);
             this.view = itemView;
+            imgPhoto = itemView.findViewById(R.id.imgPhoto);
+            tvName = itemView.findViewById(R.id.tvName);
         }
 
         void setClickListener(OnClickListener listener, Component component){

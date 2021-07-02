@@ -1,21 +1,30 @@
-package com.kawaida.mdcomponent;
+package com.kawaida.mdcomponents;
 
 import android.os.Bundle;
+
+import com.google.android.material.snackbar.Snackbar;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.view.MenuItem;
+import android.view.View;
 
 import androidx.appcompat.widget.Toolbar;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
+import androidx.navigation.ui.AppBarConfiguration;
+import androidx.navigation.ui.NavigationUI;
 
-import com.kawaida.mdcomponent.utils.CommonUtils;
-import com.kawaida.mdcomponent.utils.Constants;
+import com.kawaida.mdcomponents.databinding.ActivityStaticBinding;
+import com.kawaida.mdcomponents.utils.CommonUtils;
+import com.kawaida.mdcomponents.utils.Constants;
 
 public class StaticActivity extends AppCompatActivity {
 
     Toolbar toolbar;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

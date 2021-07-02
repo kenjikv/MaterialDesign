@@ -1,4 +1,4 @@
-package com.kawaida.mdcomponent;
+package com.kawaida.mdcomponents;
 
 import org.junit.Test;
 

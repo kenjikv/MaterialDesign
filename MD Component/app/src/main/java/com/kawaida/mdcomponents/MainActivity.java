@@ -1,4 +1,4 @@
-package com.kawaida.mdcomponent;
+package com.kawaida.mdcomponents;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
@@ -6,11 +6,16 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.kawaida.mdcomponent.adapters.ComponentAdapter;
-import com.kawaida.mdcomponent.fragments.ButtonFragment;
-import com.kawaida.mdcomponent.utils.Component;
-import com.kawaida.mdcomponent.utils.Constants;
-import com.kawaida.mdcomponent.utils.OnClickListener;
+import com.kawaida.mdcomponents.adapters.ComponentAdapter;
+import com.kawaida.mdcomponents.fragments.BottomNavigationBarFragment;
+import com.kawaida.mdcomponents.fragments.ButtonFragment;
+import com.kawaida.mdcomponents.fragments.CheckboxFragment;
+import com.kawaida.mdcomponents.fragments.FloatingActionButtonFragment;
+import com.kawaida.mdcomponents.fragments.SnackBarFragment;
+import com.kawaida.mdcomponents.fragments.TextFieldFragment;
+import com.kawaida.mdcomponents.utils.Component;
+import com.kawaida.mdcomponents.utils.Constants;
+import com.kawaida.mdcomponents.utils.OnClickListener;
 
 import java.util.ArrayList;
 
@@ -33,6 +38,11 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
     private void configAdapter() {
         mAdapter = new ComponentAdapter(new ArrayList<>(), this);
         mAdapter.add(ButtonFragment.getmInstance());
+        mAdapter.add(BottomNavigationBarFragment.getmInstance());
+        mAdapter.add(SnackBarFragment.getmInstance());
+        mAdapter.add(TextFieldFragment.getmInstance());
+        mAdapter.add(FloatingActionButtonFragment.getmInstance());
+        mAdapter.add(CheckboxFragment.getmInstance());
     }
 
     private void configRecyclerView() {

@@ -1,4 +1,4 @@
-package com.kawaida.mdcomponent;
+package com.kawaida.mdcomponents;
 
 import android.content.Context;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("com.kawaida.mdcomponent", appContext.getPackageName());
+        assertEquals("com.kawaida.mdcomponents", appContext.getPackageName());
     }
 }

@@ -1,4 +1,4 @@
-package com.kawaida.mdcomponent.utils;
+package com.kawaida.mdcomponents.utils;
 
 import java.util.Objects;
 
@@ -6,7 +6,7 @@ public class Component {
 
     private String name;
     private int photoRes;
-    private int type; //Static o Scroll
+    private int type;
 
     public Component() {
     }
